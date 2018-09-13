@@ -1,0 +1,77 @@
+import React from "react";
+import scrollToComponent from "react-scroll-to-component";
+
+const ScrollToElement = e => {
+  const ScrollHere = document.getElementById("section-" + e.target.id);
+  scrollToComponent(ScrollHere, {
+    offset: -55,
+    align: "top",
+    ease: "outExpo",
+    // ease:'inOutCube',
+    duration: 1400
+  });
+};
+
+class Nav extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { isActive: true };
+  }
+
+  ToggleHamburger = e => {
+    this.setState({ isActive: !this.state.isActive });
+  };
+
+  ToggleMenu = e => {
+    this.setState({ isActive: !this.state.isActive });
+  };
+
+  render() {
+    return (
+      <nav className="nav">
+        <a
+          className={`hamburger hamburger--collapse js-hamburger ${
+            this.state.isActive ? "" : "is-active"
+          }`}
+          onClick={this.ToggleHamburger}
+        >
+          <div className="hamburger-box">
+            <div className="hamburger-inner" />
+          </div>
+        </a>
+
+        <div
+          className={` ${this.state.isActive ? "" : "show"}`}
+          onClick={this.ToggleMenu}
+          id="nav__menu"
+        >
+          <div className="container">
+            <div className="row">
+              <ul className="">
+                {this.props.listItem.map(item => {
+                  return (
+                    <li
+                      key={`Nav ${item}`}
+                      onClick={ScrollToElement}
+                      className="nav__item "
+                    >
+                      <a
+                        onClick={ScrollToElement}
+                        id={`${item.replace(/\s/g, "")}`}
+                        className="nav__item-link"
+                      >
+                        {item}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    );
+  }
+}
+
+export default Nav;
