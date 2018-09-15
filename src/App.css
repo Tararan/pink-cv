@@ -1,27 +1,45 @@
-.App {
-  text-align: center; }
-
-.App-logo {
-  animation: App-logo-spin infinite 1s linear;
-  height: 80px; }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white; }
-
-.App-title {
-  font-size: 1.5em; }
-
-.App-intro {
-  font-size: large; }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
-
+@import url("https://fonts.googleapis.com/css?family=Fredericka+the+Great");
+@import url("https://fonts.googleapis.com/css?family=Poiret+One");
+@import url("https://fonts.googleapis.com/css?family=Vidaloka");
+@import url("https://fonts.googleapis.com/css?family=Paytone+One");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display+SC:900");
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+@import url("https://fonts.googleapis.com/css?family=Vidaloka");
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface&subset=latin-ext");
 body {
-  color: blue; }
+  background-color: #ffcee0; }
+
+body, html {
+  overflow-x: hidden; }
+
+.Nav {
+  border-bottom: 2px solid  black;
+  position: relative; }
+  .Nav:after {
+    content: "";
+    width: 200vw;
+    height: 4px;
+    position: absolute;
+    z-index: 2;
+    background: linear-gradient(to right, #d4beb1 5%, #af957e 8%, #fbeae3 10%, #af957e 15%, #fbeae3 20%, #af957e 25%, #d4beb1 60%, #af957e 70%, #fbeae3 75%, #af957e 80%, #d4beb1 85%, #fbeae3 90%);
+    transform: translateX(0);
+    transition: transform 5s ease-out; }
+  .Nav:hover:after {
+    transform: translateX(-100vw);
+    transition: transform 5s ease-in; }
+  .Nav__list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.95); }
+    @media (max-width: 991px) {
+      .Nav__list {
+        flex-flow: column nowrap; } }
+  .Nav__list-item {
+    text-align: center;
+    list-style: none; }
+  .Nav__list-item-link {
+    padding: 15px 5px;
+    display: block; }

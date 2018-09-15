@@ -28,7 +28,7 @@ class Nav extends React.Component {
 
   render() {
     return (
-      <nav className="nav">
+      <nav className="Nav">
         <a
           className={`hamburger hamburger--collapse js-hamburger ${
             this.state.isActive ? "" : "is-active"
@@ -46,19 +46,18 @@ class Nav extends React.Component {
           id="nav__menu"
         >
           <div className="container">
-            <div className="row">
-              <ul className="">
+              <ul className="Nav__list">
                 {this.props.listItem.map(item => {
                   return (
                     <li
                       key={`Nav ${item}`}
                       onClick={ScrollToElement}
-                      className="nav__item "
+                      className="Nav__list-item "
                     >
                       <a
                         onClick={ScrollToElement}
                         id={`${item.replace(/\s/g, "")}`}
-                        className="nav__item-link"
+                        className="Nav__list-item-link"
                       >
                         {item}
                       </a>
@@ -66,7 +65,6 @@ class Nav extends React.Component {
                   );
                 })}
               </ul>
-            </div>
           </div>
         </div>
       </nav>
