@@ -1,13 +1,20 @@
 // @import "../styles/variables/hamburger.scss";
 
 .Nav {
-  border-bottom: 2px solid  black;
+  // border-bottom: 1px solid  black;
   position: relative;
+  box-shadow: $weak-shadow;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 
+ /* 
   &:after {
     content:"";
     width: 200vw;
-    height: 4px;
+    height: 2px;
     position: absolute;
     z-index: 2;
     background: linear-gradient(to right, $copper-gradient 5%, $copper-gradient-dark 8%, $copper-gradient-light 10%,  
@@ -25,14 +32,14 @@
       transition: transform 5s ease-in;
     }
   }
-
+ */
   &__list {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
     padding: 0;
     margin: 0;
-    background-color: $white-95;
+    background-color: $white-75;
 
     @media (max-width: $screen-md-max) {
       flex-flow: column nowrap;
