@@ -4,7 +4,6 @@ import Particles from 'react-particles-js';
 import Nav from './Nav/NavContainer';
 import { navContent } from './Nav/navContent';
 
-
 class App extends Component {
   render() {
     return (

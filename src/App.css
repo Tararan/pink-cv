@@ -19,30 +19,7 @@ body, html {
   top: 0;
   left: 0;
   right: 0;
-  margin: auto;
-  /* 
-  &:after {
-    content:"";
-    width: 200vw;
-    height: 2px;
-    position: absolute;
-    z-index: 2;
-    background: linear-gradient(to right, $copper-gradient 5%, $copper-gradient-dark 8%, $copper-gradient-light 10%,  
-    $copper-gradient-dark 15%, $copper-gradient-light 20%,
-    $copper-gradient-dark 25%, $copper-gradient 60%, $copper-gradient-dark 70%, 
-    $copper-gradient-light 75%, $copper-gradient-dark 80%, $copper-gradient 85%, $copper-gradient-light 90%);
-    // background: linear-gradient(0.25turn, #B22800 20%, #ebf8e1 45%, #ebf8e1 55%, #B22800 90%);
-    transform: translateX(0);
-    transition: transform 5s ease-out;
-  }
-
-  &:hover {
-    &:after {
-      transform: translateX(-100vw);
-      transition: transform 5s ease-in;
-    }
-  }
- */ }
+  margin: auto; }
   .Nav__list {
     display: flex;
     flex-flow: row nowrap;
