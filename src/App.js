@@ -4,11 +4,15 @@ import Particles from 'react-particles-js';
 import Nav from './Nav/NavContainer';
 import { navContent } from './Nav/navContent';
 
+import Card from './Card/CardContainer';
+import { cardContent } from './Card/cardContent';
+
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Nav navContent={navContent} />
+        <Card cardContent={cardContent} />
         <Particles className="particles" params={
           {
             "particles": {
@@ -16,7 +20,7 @@ class App extends Component {
                 "value": 20,
                 "density": {
                   "enable": true,
-                  "value_area": 1000
+                  "value_area": 800
                 }
               },
               "color": {
@@ -31,11 +35,6 @@ class App extends Component {
                 "polygon": {
                   "nb_sides": 5
                 },
-                "image": {
-                  "src": "img/github.svg",
-                  "width": 100,
-                  "height": 100
-                }
               },
               "opacity": {
                 "value": 0.5,
@@ -48,7 +47,7 @@ class App extends Component {
                 }
               },
               "size": {
-                "value": 3,
+                "value": 4,
                 "random": true,
                 "anim": {
                   "enable": false,
@@ -87,8 +86,8 @@ class App extends Component {
                   "mode": "bubble"
                 },
                 "onclick": {
-                  "enable": false,
-                  "mode": "push"
+                  "enable": true,
+                  "mode": "repulse"
                 },
                 "resize": true
               },
@@ -100,18 +99,18 @@ class App extends Component {
                   }
                 },
                 "bubble": {
-                  "distance": 280.1674914350971,
-                  "size": 7,
+                  "distance": 350,
+                  "size": 6,
                   "duration": 10,
                   "opacity": 0.4,
-                  "speed": 3
+                  "speed": 6
                 },
                 "repulse": {
                   "distance": 200,
-                  "duration": 0.4
+                  "duration": 2.5
                 },
                 "push": {
-                  "particles_nb": 4
+                  "particles_nb": 8
                 },
                 "remove": {
                   "particles_nb": 2
