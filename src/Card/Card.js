@@ -3,6 +3,7 @@ import Fade from 'react-reveal';
 
 const Card = ({ title, description, image }) => {
     return (
+        <div class="container">
         <Fade>
         <section className="Card">
             <h3 className="Card__title">
@@ -22,6 +23,7 @@ const Card = ({ title, description, image }) => {
             </div>
         </section>
         </Fade>
+        </div>
     );
 }
 

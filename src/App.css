@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Fredericka+the+Great");
 @import url("https://fonts.googleapis.com/css?family=Poiret+One");
 @import url("https://fonts.googleapis.com/css?family=Vidaloka");
@@ -6,6 +7,32 @@
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 @import url("https://fonts.googleapis.com/css?family=Vidaloka");
 @import url("https://fonts.googleapis.com/css?family=Abril+Fatface&subset=latin-ext");
+.container {
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: 0 auto; }
+  @media (min-width: 769px) {
+    .container {
+      width: 750px; } }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px; } }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px; } }
+  @media (max-width: 768px) {
+    .container {
+      width: auto;
+      padding: 0 15px;
+      margin: auto; } }
+
+/* 
+Extra small devices (<768px): width: auto (or no width)
+Small Devices (≥768px): width: 750px
+Medium Devices (≥992px): width: 970px
+Larger Devices (≥1200px): width: 1170px
+ */
 body {
   background-color: #ffcee0; }
 
@@ -39,7 +66,7 @@ body, html {
     padding: 0;
     margin: 0;
     background-color: rgba(255, 255, 255, 0.75); }
-    @media (max-width: 991px) {
+    @media (max-width: 1199px) {
       .Nav__list {
         flex-flow: column nowrap; } }
   .Nav__list-item {

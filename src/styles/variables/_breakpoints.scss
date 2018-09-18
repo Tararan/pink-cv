@@ -1,7 +1,40 @@
-$screen-xs-min: 575px;
-$screen-xs-max: 576px;
-$screen-sm-min: 767px;
-$screen-sm-max: 768px;
-$screen-md-min: 990px;
-$screen-md-max: 991px;
+$screen-xs-max: 768px;
+$screen-sm-min: 769px;
+$screen-sm-max: 991px;
+$screen-md-min: 992px;
+$screen-md-max: 1199px;
 $screen-lg-max: 1200px;
+
+.container {
+    // width: 80%;
+    // max-width: 1000px;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    @media (min-width: $screen-sm-min) {
+        width: 750px
+    }
+
+    @media (min-width: $screen-md-min) {
+        width: 970px
+    }
+
+    @media (min-width: $screen-lg-max) {
+        width: 1170px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+        width: auto;
+        padding: 0 15px;
+        margin: auto;
+    }
+}
+
+/* 
+Extra small devices (<768px): width: auto (or no width)
+Small Devices (≥768px): width: 750px
+Medium Devices (≥992px): width: 970px
+Larger Devices (≥1200px): width: 1170px
+ */

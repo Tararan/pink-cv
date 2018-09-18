@@ -117,10 +117,7 @@ class App extends Component {
                 }
               }
             },
-            "retina_detect": true
-          }
-        }
-        />
+            "retina_detect": true }} />
       </div>
 
     );

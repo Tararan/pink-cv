@@ -29,6 +29,7 @@ class Nav extends React.Component {
   render() {
     return (
       <nav className="Nav">
+      <div class="container">
         <a
           className={`hamburger hamburger--collapse js-hamburger ${
             this.state.isActive ? "" : "is-active"
@@ -66,6 +67,7 @@ class Nav extends React.Component {
                 })}
               </ul>
           </div>
+        </div>
         </div>
       </nav>
     );
