@@ -43,7 +43,6 @@ body, html {
   position: relative; }
 
 .particles {
-  height: 100vh;
   width: 100vw;
   position: absolute;
   z-index: 2000;
@@ -51,27 +50,52 @@ body, html {
   left: 0;
   right: 0; }
 
+.main {
+  padding: 70px 0 35px; }
+
 .Nav {
   position: relative;
   box-shadow: 0px 10px 28px 1px rgba(0, 0, 0, 0.1);
   position: fixed;
+  z-index: 2;
   top: 0;
   left: 0;
   right: 0;
-  margin: auto; }
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.75); }
   .Nav__list {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
     padding: 0;
-    margin: 0;
-    background-color: rgba(255, 255, 255, 0.75); }
-    @media (max-width: 1199px) {
-      .Nav__list {
-        flex-flow: column nowrap; } }
+    margin: 0; }
   .Nav__list-item {
     text-align: center;
     list-style: none; }
   .Nav__list-item-link {
     padding: 15px 5px;
     display: block; }
+
+.Card {
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 20px 40px;
+  border-radius: 20px; }
+  .Card__content {
+    display: flex; }
+  .Card__content-description {
+    width: calc(100% - 400px);
+    margin: 0 10px 0 0; }
+  .Card__content-image-container {
+    position: relative; }
+  .Card__content-image, .Card__content-image-blurred {
+    width: 100%;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 0 10px 0 0; }
+  .Card__content-image-blurred {
+    transform: scale(1.01);
+    position: absolute;
+    z-index: -1;
+    top: 10px;
+    filter: blur(20px); }

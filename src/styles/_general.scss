@@ -10,11 +10,15 @@ body, html {
   position: relative;
 }
 .particles {
-  height: 100vh;
+  // height: 100%;
   width: 100vw;
   position: absolute;
   z-index: 2000;
   top: 0;
   left: 0;
   right: 0;
+}
+
+.main {
+  padding: 70px 0 35px;
 }

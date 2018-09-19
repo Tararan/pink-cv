@@ -5,10 +5,12 @@
   position: relative;
   box-shadow: $weak-shadow;
   position: fixed;
+  z-index: 2;
   top: 0;
   left: 0;
   right: 0;
   margin: auto;
+  background-color: $white-75;
 
   &__list {
     display: flex;
@@ -16,10 +18,9 @@
     justify-content: space-around;
     padding: 0;
     margin: 0;
-    background-color: $white-75;
 
     @media (max-width: $screen-md-max) {
-      flex-flow: column nowrap;
+      // flex-flow: column nowrap;
     }
   }
 
