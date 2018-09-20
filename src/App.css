@@ -2,11 +2,10 @@
 @import url("https://fonts.googleapis.com/css?family=Fredericka+the+Great");
 @import url("https://fonts.googleapis.com/css?family=Poiret+One");
 @import url("https://fonts.googleapis.com/css?family=Vidaloka");
-@import url("https://fonts.googleapis.com/css?family=Paytone+One");
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display+SC:900");
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 @import url("https://fonts.googleapis.com/css?family=Vidaloka");
 @import url("https://fonts.googleapis.com/css?family=Abril+Fatface&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC");
 .container {
   position: relative;
   left: 0;
@@ -34,13 +33,12 @@ Medium Devices (≥992px): width: 970px
 Larger Devices (≥1200px): width: 1170px
  */
 body {
-  background-color: #ffcee0; }
+  background-color: #FEC1D9;
+  position: relative; }
 
 body, html {
-  overflow-x: hidden; }
-
-.App {
-  position: relative; }
+  overflow-x: hidden;
+  height: 100%; }
 
 .particles {
   position: absolute;
@@ -61,7 +59,10 @@ body, html {
   left: 0;
   right: 0;
   margin: auto;
-  background-color: rgba(255, 255, 255, 0.75); }
+  background-color: rgba(255, 255, 255, 0.95);
+  color: rgba(36, 36, 36, 0.63);
+  font-size: 1.2em;
+  font-family: 'Vidaloka', serif; }
   .Nav__list {
     display: flex;
     flex-flow: row nowrap;
@@ -73,15 +74,46 @@ body, html {
     list-style: none; }
   .Nav__list-item-link {
     padding: 15px 5px;
-    display: block; }
+    display: block;
+    position: relative; }
+    .Nav__list-item-link:after, .Nav__list-item-link:before {
+      content: "";
+      height: 10px;
+      width: 100%;
+      transform: scaleX(0);
+      transform-origin: left;
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      left: 0;
+      background-color: #FEC1D9;
+      transition: transform 0.25s ease-out; }
+    .Nav__list-item-link:before {
+      top: 0;
+      right: 0;
+      transform-origin: right; }
+    .Nav__list-item-link:hover {
+      cursor: pointer; }
+      .Nav__list-item-link:hover:after, .Nav__list-item-link:hover:before {
+        transform: scaleX(1);
+        transition: transform 0.25s ease-out; }
 
 .Card {
   background-color: rgba(255, 255, 255, 0.75);
-  padding: 20px 40px;
+  border: 1px solid #fff;
+  padding: 10px 40px 40px;
   border-radius: 20px;
-  box-shadow: 0 4px 20px 1px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 10px 5px rgba(255, 255, 255, 0.4);
   position: relative;
-  z-index: 3; }
+  z-index: 3;
+  color: rgba(36, 36, 36, 0.63);
+  font-family: 'Poiret One', cursive;
+  font-size: 1.2em; }
+  .Card__title {
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+    font-size: 2em;
+    margin: 10px 0 40px; }
   .Card__content {
     display: flex; }
   .Card__content-description {
@@ -95,8 +127,8 @@ body, html {
     max-width: 400px;
     margin: 0 10px 0 0; }
   .Card__content-image-blurred {
-    transform: scale(1.01);
+    transform: scale(1.03);
     position: absolute;
     z-index: -1;
-    top: 10px;
-    filter: blur(20px); }
+    top: 0;
+    filter: blur(18px); }

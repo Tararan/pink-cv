@@ -10,7 +10,10 @@
   left: 0;
   right: 0;
   margin: auto;
-  background-color: $white-75;
+  background-color: $white-95;
+  color: $font-color;
+  font-size: 1.2em;
+  font-family: 'Vidaloka', serif;
 
   &__list {
     display: flex;
@@ -32,5 +35,35 @@
   &__list-item-link {
     padding: 15px 5px;
     display: block;
+    position: relative;
+
+    &:after, &:before {
+      content: "";
+      height: 10px;
+      width: 100%;
+      transform: scaleX(0);
+      transform-origin: left;
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      left: 0;
+      background-color: $rose;
+      transition: transform 0.25s ease-out;
+    }
+
+    &:before {
+      top: 0;
+      right: 0;
+      transform-origin: right;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      &:after, &:before {
+        transform: scaleX(1);
+        transition: transform 0.25s ease-out;
+      }
+    }
   }
 }

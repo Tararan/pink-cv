@@ -8,9 +8,13 @@ $white-75: rgba(255, 255, 255, 0.75);
 $white-40: rgba(255, 255, 255, 0.4);
 $white-glass: rgba(255, 255, 255, 0.1);
 
-$white-glow: 0 4px 20px 1px $white-40;
+$white-glow: 0 4px 10px 5px $white-40;
 
-$rose: rgb(255, 206, 224);
+$font-color: rgba(36, 36, 36, 0.63);
+
+$rose: #FEC1D9;
+// $rose: rgb(255, 206, 224);
+$gentle-olive: #E2FEC1;
 // $rose: #FF8EB8;
 $copper-gradient: #d4beb1;
 // $copper-gradient: rgb(116, 38, 16);
