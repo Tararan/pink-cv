@@ -17,7 +17,7 @@ class App extends Component {
           {
             "particles": {
               "number": {
-                "value": 20,
+                "value": 40,
                 "density": {
                   "enable": true,
                   "value_area": 800
@@ -37,7 +37,7 @@ class App extends Component {
                 },
               },
               "opacity": {
-                "value": 0.5,
+                "value": 0.3,
                 "random": false,
                 "anim": {
                   "enable": false,
@@ -47,7 +47,7 @@ class App extends Component {
                 }
               },
               "size": {
-                "value": 4,
+                "value": 2,
                 "random": true,
                 "anim": {
                   "enable": false,
@@ -70,7 +70,7 @@ class App extends Component {
                 "random": false,
                 "straight": false,
                 "out_mode": "out",
-                "bounce": false,
+                "bounce": true,
                 "attract": {
                   "enable": false,
                   "rotateX": 600,
@@ -100,9 +100,9 @@ class App extends Component {
                 },
                 "bubble": {
                   "distance": 350,
-                  "size": 6,
+                  "size": 2.5,
                   "duration": 10,
-                  "opacity": 0.4,
+                  "opacity": 1,
                   "speed": 6
                 },
                 "repulse": {
