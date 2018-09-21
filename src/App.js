@@ -13,14 +13,14 @@ class App extends Component {
       <div className="App">
         <Nav navContent={navContent} />
         <Card cardContent={cardContent} />
-        <Particles className="particles" params={
+        <Particles className="particles" height="1500px" params={
           {
             "particles": {
               "number": {
                 "value": 20,
                 "density": {
                   "enable": true,
-                  "value_area": 800
+                  "value_area": 1200
                 }
               },
               "color": {
@@ -57,7 +57,7 @@ class App extends Component {
                 }
               },
               "line_linked": {
-                "enable": true,
+                "enable": false,
                 "distance": 150,
                 "color": "#ffffff",
                 "opacity": 0.2604192355117139,
@@ -65,9 +65,9 @@ class App extends Component {
               },
               "move": {
                 "enable": true,
-                "speed": 0.5,
+                "speed": 0.1,
                 "direction": "none",
-                "random": false,
+                "random": true,
                 "straight": false,
                 "out_mode": "out",
                 "bounce": true,

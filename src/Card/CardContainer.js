@@ -9,7 +9,7 @@ const CardContainer = ({ cardContent }) => {
                 <Card
                     title= {user.title}
                     description= {user.description}
-                    // descriptionList= {user.descriptionList}
+                    descriptionList= {user.descriptionList}
                     image= {user.image}
                 />
             // </div>

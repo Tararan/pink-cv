@@ -127,8 +127,9 @@ body, html {
     max-width: 400px;
     margin: 0 10px 0 0; }
   .Card__content-image-blurred {
-    transform: scale(1.03);
+    transform: scale(1.02);
+    opacity: 0.5;
     position: absolute;
     z-index: -1;
     top: 0;
-    filter: blur(18px); }
+    filter: blur(2px); }
