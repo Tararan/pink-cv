@@ -1,9 +1,8 @@
 import React from "react";
 import Fade from 'react-reveal';
 
-const Card = ({ title, description, descriptionList, image }) => {
+const Experience = ({ title, description, descriptionList, image }) => {
     return (
-
             <Fade>
             <section className="Card">
                 <h3 className="Card__title">
@@ -35,4 +34,4 @@ const Card = ({ title, description, descriptionList, image }) => {
     );
 }
 
-export default Card;
+export default Experience;

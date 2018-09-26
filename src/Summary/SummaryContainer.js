@@ -1,10 +1,10 @@
 import React from "react";
-import Card from "./Card.js";
+import Summary from "./Summary.js";
 
-const CardContainer = ({ cardContent }) => {
-  return cardContent.map((user, i) => {
+const SummaryContainer = ({ summaryContent }) => {
+  return summaryContent.map((user, i) => {
     return (
-      <Card
+      <Summary
         title={user.title}
         description={user.description}
         descriptionList={user.descriptionList}
@@ -14,4 +14,4 @@ const CardContainer = ({ cardContent }) => {
   });
 };
 
-export default CardContainer;
+export default SummaryContainer;

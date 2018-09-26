@@ -1,7 +1,7 @@
 import React from "react";
 import Fade from 'react-reveal';
 
-const Card = ({ title, description, descriptionList, image }) => {
+const Education = ({ title, description, descriptionList, image }) => {
     return (
 
             <Fade>
@@ -35,4 +35,4 @@ const Card = ({ title, description, descriptionList, image }) => {
     );
 }
 
-export default Card;
+export default Education;

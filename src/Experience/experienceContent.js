@@ -1,4 +1,4 @@
-export const cardContent = [
+export const experienceContent = [
     {
         title: 'Lorem Ipsum',
         description: [

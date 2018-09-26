@@ -3,7 +3,7 @@ import Nav from './Nav';
 
 const NavList = ({ navContent }) => {
     return (
-        <div>
+        <nav className="Nav">
             {
                 navContent.map((user, i) => {
                     return (
@@ -13,7 +13,7 @@ const NavList = ({ navContent }) => {
                     );
                 })
             }
-        </div>
+        </nav>
     );
 }
 

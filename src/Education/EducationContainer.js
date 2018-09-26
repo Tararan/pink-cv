@@ -1,10 +1,10 @@
 import React from "react";
-import Card from "./Card.js";
+import Education from "./Education.js";
 
-const CardContainer = ({ cardContent }) => {
-  return cardContent.map((user, i) => {
+const EducationContainer = ({ educationContent }) => {
+  return educationContent.map((user, i) => {
     return (
-      <Card
+      <Education
         title={user.title}
         description={user.description}
         descriptionList={user.descriptionList}
@@ -14,4 +14,4 @@ const CardContainer = ({ cardContent }) => {
   });
 };
 
-export default CardContainer;
+export default EducationContainer;

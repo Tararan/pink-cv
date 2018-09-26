@@ -1,10 +1,10 @@
 import React from "react";
-import Card from "./Card.js";
+import Experience from "./Experience.js";
 
-const CardContainer = ({ cardContent }) => {
-  return cardContent.map((user, i) => {
+const ExperienceContainer = ({ experienceContent }) => {
+  return experienceContent.map((user, i) => {
     return (
-      <Card
+      <Experience
         title={user.title}
         description={user.description}
         descriptionList={user.descriptionList}
@@ -14,4 +14,4 @@ const CardContainer = ({ cardContent }) => {
   });
 };
 
-export default CardContainer;
+export default ExperienceContainer;

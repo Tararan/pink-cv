@@ -8,14 +8,23 @@ body, html {
   height: 100%;
 }
 
+.App {
+  position: relative;
+  overflow: hidden;
+}
+
 .particles {
   position: absolute;
-  z-index: 1;
+
+  z-index: 0;
   top: 0;
   left: 0;
   right: 0;
+  width: 100vw;
+  height: 500vh;
 }
 
 .main {
   padding: 70px 0 35px;
+  pointer-events: none;
 }
