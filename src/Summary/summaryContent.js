@@ -32,7 +32,7 @@ export const summaryContent = [
     `
         ],
         image: `
-        https://images.unsplash.com/photo-1504593811423-6dd665756598?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9305a37dfc018487bca76a6f59944ad4&auto=format&fit=crop&
+        https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=831bf6a64a9f4226415aec34ee335705&auto=format&fit=crop&
     `
     }
 ];

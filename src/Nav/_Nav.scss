@@ -48,7 +48,7 @@
       bottom: 0;
       left: 0;
       background-color: $rose;
-      transition: transform 0.25s ease-out;
+      transition: transform 0.25s ease-out 0.15s;
     }
 
     &:before {

@@ -1,14 +1,46 @@
-@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url("https://fonts.googleapis.com/css?family=Poiret+One");
 // font-family: 'Poiret One', cursive;
-@import url('https://fonts.googleapis.com/css?family=Vidaloka');
+@import url("https://fonts.googleapis.com/css?family=Vidaloka");
 // font-family: 'Vidaloka', serif;
-@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
 // font-family: 'Pacifico', cursive;
-@import url('https://fonts.googleapis.com/css?family=Vidaloka');
-// font-family: 'Vidaloka', serif;
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface&subset=latin-ext');
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface&subset=latin-ext");
 // font-family: 'Abril Fatface', cursive;
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC");
 // font-family: 'Amatic SC', cursive;
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700');
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:700");
 // font-family: 'Playfair Display', serif;
+
+.title {
+  position: relative;
+
+  &__section {
+    font-family: "Poiret One", cursive;
+    top: 0;
+    font-size: 4em;
+    text-align: center;
+    display: block;
+    letter-spacing: 0.25em;
+    color: $font-color;
+
+    &:before,
+    &:after {
+      content: " ~ ";
+    }
+  }
+
+  &__background {
+    // font-family: 'Abril Fatface', cursive;
+    font-family: "Playfair Display", serif;
+    color: $white-40;
+    font-size: 20em;
+    letter-spacing: 1px;
+    position: absolute;
+    z-index: -1;
+    top: -330px;
+    left: 0%;
+    letter-spacing: -0.05em;
+
+    filter: blur(8px);
+  }
+}

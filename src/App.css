@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css?family=Poiret+One");
 @import url("https://fonts.googleapis.com/css?family=Vidaloka");
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
-@import url("https://fonts.googleapis.com/css?family=Vidaloka");
 @import url("https://fonts.googleapis.com/css?family=Abril+Fatface&subset=latin-ext");
 @import url("https://fonts.googleapis.com/css?family=Amatic+SC");
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:700");
@@ -32,6 +31,30 @@ Small Devices (≥768px): width: 750px
 Medium Devices (≥992px): width: 970px
 Larger Devices (≥1200px): width: 1170px
  */
+.title {
+  position: relative; }
+  .title__section {
+    font-family: "Poiret One", cursive;
+    top: 0;
+    font-size: 4em;
+    text-align: center;
+    display: block;
+    letter-spacing: 0.25em;
+    color: rgba(36, 36, 36, 0.63); }
+    .title__section:before, .title__section:after {
+      content: " ~ "; }
+  .title__background {
+    font-family: "Playfair Display", serif;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 20em;
+    letter-spacing: 1px;
+    position: absolute;
+    z-index: -1;
+    top: -330px;
+    left: 0%;
+    letter-spacing: -0.05em;
+    filter: blur(8px); }
+
 body {
   background-color: #FEC1D9;
   position: relative; }
@@ -50,12 +73,12 @@ body, html {
   top: 0;
   left: 0;
   right: 0;
-  width: 100vw;
+  margin: auto;
+  width: auto;
   height: 500vh; }
 
 .main {
-  padding: 70px 0 35px;
-  pointer-events: none; }
+  padding: 70px 0 35px; }
 
 .Nav {
   position: relative;
@@ -94,7 +117,7 @@ body, html {
       bottom: 0;
       left: 0;
       background-color: #FEC1D9;
-      transition: transform 0.25s ease-out; }
+      transition: transform 0.25s ease-out 0.15s; }
     .Nav__list-item-link:before {
       top: 0;
       right: 0;
@@ -111,7 +134,7 @@ body, html {
   padding: 10px 40px 40px;
   margin: 40px auto 60px;
   border-radius: 20px;
-  box-shadow: 0 4px 10px 5px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 20px 5px rgba(255, 255, 255, 0.4);
   position: relative;
   z-index: 3;
   color: rgba(36, 36, 36, 0.63);
@@ -119,7 +142,7 @@ body, html {
   font-size: 1.2em; }
   .Card__title {
     font-family: "Playfair Display", serif;
-    text-align: center;
+    text-align: left;
     font-size: 2em;
     margin: 10px 0 40px; }
   .Card__content {
@@ -141,3 +164,82 @@ body, html {
     z-index: -1;
     top: 0;
     filter: blur(14px) saturate(1.8); }
+
+.Social {
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 4px 20px 5px rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 0;
+  border-radius: 0 20px 20px  0;
+  width: 80px;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: calc(50% - 100px);
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-items: center; }
+  @media (max-width: 1199px) {
+    .Social {
+      box-shadow: none;
+      background-color: transparent;
+      border: none;
+      width: calc(100% - 60px);
+      top: 0;
+      right: 0;
+      left: auto;
+      flex-flow: row nowrap;
+      justify-content: flex-end; } }
+  .Social__icons {
+    width: 50px;
+    display: block;
+    position: relative;
+    margin: 5px 0; }
+    .Social__icons:after {
+      content: "";
+      z-index: -1;
+      display: block;
+      position: absolute;
+      left: calc(50% - 10px);
+      top: calc(50% - 13px);
+      background-color: white;
+      width: 0;
+      height: 26px;
+      transition: width 0.45s 0.2s; }
+      @media (max-width: 1199px) {
+        .Social__icons:after {
+          top: calc(50% - 10px);
+          left: calc(50% - 8px);
+          width: 20px;
+          height: 19px; } }
+    .Social__icons:hover:after {
+      width: 25px;
+      transition: width 0.45s; }
+      @media (max-width: 1199px) {
+        .Social__icons:hover:after {
+          width: 0; } }
+    @media (max-width: 1199px) {
+      .Social__icons {
+        width: 65px;
+        margin: 0; } }
+  .Social__icons-img {
+    width: 100%; }
+    @media (max-width: 1199px) {
+      .Social__icons-img {
+        padding: 5px 10px; } }
+  .Social__icons-img--hover {
+    filter: saturate(1.2); }
+  .Social__icons-img--blurred {
+    opacity: 0.8;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    filter: blur(1px);
+    transform: scale(1);
+    transition: transform 0.25s 0.15s, filter 0.25s 0.45s; }
+  .Social__icons-img--hover:hover ~ .Social__icons-img--blurred {
+    filter: blur(4px);
+    transform: scale(1.2);
+    transition: transform 0.25s 0.15s, filter 0.25s 0.25s; }

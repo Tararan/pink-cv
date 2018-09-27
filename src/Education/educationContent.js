@@ -32,7 +32,7 @@ export const educationContent = [
     `
         ],
         image: `
-    https://images.unsplash.com/photo-1519940640025-75fdf32010d7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=985117cd38a36d15bad22efdde61f5a8&auto=format&fit=crop&
+        https://images.unsplash.com/photo-1470328358326-dee4879da669?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=407e114dc47bc1df4ce0e4292f158576&auto=format&fit=crop&
     `
     }
 ];

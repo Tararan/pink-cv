@@ -3,7 +3,6 @@ import Fade from 'react-reveal';
 
 const Education = ({ title, description, descriptionList, image }) => {
     return (
-
             <Fade>
             <section className="Card">
                 <h3 className="Card__title">
@@ -12,13 +11,13 @@ const Education = ({ title, description, descriptionList, image }) => {
                 <div className="Card__content">
                     <div className="Card__content-description">
                         { description.map((item, i) => (
-                            <p key={`${item}${i}1`}>
+                            <p key={`Education-${item}${i}1`}>
                             {item}
                             </p>
                         ))}
                     <ul>
                     { descriptionList.map((item, i) => (
-                            <li key={`${item}${i}1`}>
+                            <li key={`Education-${item}${i}1`}>
                             {item}
                             </li>
                         ))}    

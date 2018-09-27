@@ -2,12 +2,13 @@ import React from "react";
 import scrollToComponent from "react-scroll-to-component";
 
 const ScrollToElement = e => {
+  console.log(e.target.id);
   const ScrollHere = document.getElementById("section-" + e.target.id);
   scrollToComponent(ScrollHere, {
     offset: -55,
     align: "top",
-    ease: "outExpo",
-    // ease:'inOutCube',
+    // ease: "outExpo",
+    ease:'inOutCube',
     duration: 1400
   });
 };
@@ -49,16 +50,8 @@ class Nav extends React.Component {
             <ul className="Nav__list">
               {this.props.listItem.map(item => {
                 return (
-                  <li
-                    key={`Nav ${item}`}
-                    onClick={ScrollToElement}
-                    className="Nav__list-item "
-                  >
-                    <a
-                      onClick={ScrollToElement}
-                      id={`${item.replace(/\s/g, "")}`}
-                      className="Nav__list-item-link"
-                    >
+                  <li onClick={ScrollToElement} key={`Nav ${item}`} className="Nav__list-item " >
+                    <a onClick={ScrollToElement} id={`${item.replace(/\s/g, "")}`} className="Nav__list-item-link">
                       {item}
                     </a>
                   </li>

@@ -1,0 +1,109 @@
+.Social {
+    
+    background-color: $white-75;
+    box-shadow: $white-glow;
+    border: 1px solid $white-glass;
+    // height: 400px;
+    padding: 10px 0;
+    border-radius: 0 20px 20px  0;
+    width: 80px;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: calc(50% - 100px);
+
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: center;
+
+    @media (max-width: $screen-md-max) {
+        box-shadow: none;
+        background-color: transparent;
+        border: none;
+
+        width: calc(100% - 60px);
+        top: 0;
+        right: 0;
+        left: auto;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+    }    
+
+    &__icons {
+        width: 50px;
+        display: block;
+        position: relative;
+        margin: 5px 0;
+
+        &:after {
+            content:"";
+            z-index: -1;
+            display: block;
+            position: absolute;
+            left: calc(50% - 10px);
+            top: calc(50% - 13px);
+            background-color: white;
+            width: 0;
+            height: 26px;
+
+            transition: width 0.45s 0.2s;
+
+            @media (max-width: $screen-md-max) {
+                top: calc(50% - 10px);
+                left: calc(50% - 8px);
+                width: 20px;
+                height: 19px;
+            }
+        }
+
+        &:hover {
+            &:after {
+                width: 25px;
+
+                transition: width 0.45s;
+
+                @media (max-width: $screen-md-max) {
+                    width: 0;
+                }
+            }
+        }
+
+        @media (max-width: $screen-md-max) {
+            width: 65px;
+            margin: 0;
+        }
+    }
+
+    &__icons-img {
+        width: 100%;
+        // padding: 10px;
+
+        @media (max-width: $screen-md-max) {
+            padding: 5px 10px;
+        }
+    }
+
+    &__icons-img--hover {
+        filter: saturate(1.2);
+    }
+
+    &__icons-img--blurred {
+        opacity: 0.8;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        filter: blur(1px);
+        transform: scale(1);
+
+        transition: transform 0.25s 0.15s, filter 0.25s 0.45s;
+    }
+
+    &__icons-img--hover:hover ~ &__icons-img--blurred {
+        filter: blur(4px);
+        transform: scale(1.2);
+
+        transition: transform 0.25s 0.15s, filter 0.25s 0.25s;
+    }
+}
