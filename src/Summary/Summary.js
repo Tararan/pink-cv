@@ -1,9 +1,9 @@
 import React from "react";
-import Fade from "react-reveal";
+// import Fade from "react-reveal";
 
 const Summary = ({ title, description, descriptionList, image }) => {
   return (
-    <Fade>
+    // <Fade>
       <section className="Card">
         <h3 className="Card__title">{title}</h3>
         <div className="Card__content">
@@ -24,15 +24,15 @@ const Summary = ({ title, description, descriptionList, image }) => {
               src={`${image.replace(/\s/g, "")}w=400&q=50`}
               alt="logo"
             />
-            <img
+{/*             <img
               className="Card__content-image-blurred"
               src={`${image.replace(/\s/g, "")}w=50&q=10`}
               alt="logo"
-            />
+            /> */}
           </div>
         </div>
       </section>
-    </Fade>
+    //  </Fade>
   );
 };
 

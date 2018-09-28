@@ -13,6 +13,7 @@
 
 .title {
   position: relative;
+  white-space: nowrap;
 
   &__section {
     font-family: "Poiret One", cursive;
@@ -22,6 +23,10 @@
     display: block;
     letter-spacing: 0.25em;
     color: $font-color;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 1.4em;
+    }
 
     &:before,
     &:after {

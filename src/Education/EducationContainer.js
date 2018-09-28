@@ -20,7 +20,7 @@ const EducationContainer = ({ educationContent, navContent }) => {
       <div className="container">
       {educationContent.map((user, i) => {
         return (
-          <Education
+          <Education key={`Education ${i}`}
             title={user.title}
             description={user.description}
             descriptionList={user.descriptionList}

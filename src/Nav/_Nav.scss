@@ -1,19 +1,27 @@
-// @import "../styles/variables/hamburger.scss";
-
 .Nav {
-  // border-bottom: 1px solid  black;
-  position: relative;
   box-shadow: $weak-shadow;
   position: fixed;
-  z-index: 4;
+  z-index: 6;
   top: 0;
   left: 0;
   right: 0;
   margin: auto;
-  background-color: $white-95;
   color: $font-color;
   font-size: 1.2em;
-  font-family: 'Vidaloka', serif;
+  font-family: "Vidaloka", serif;
+  // height: 74px;
+  background-color: $white-95;
+
+  &:before {
+    @media (max-width: $screen-md-max) {
+      content: "";
+      position: fixed;
+      border-bottom: 1px solid $copper-gradient;
+      height: 74px;
+      background-color: $white-95;
+      width: 100%;
+    }
+  }
 
   &__list {
     display: flex;
@@ -23,7 +31,27 @@
     margin: 0;
 
     @media (max-width: $screen-md-max) {
-      // flex-flow: column nowrap;
+      display: flex;
+      background-color: $white-95;
+      flex-flow: column nowrap;
+      align-self: center;
+      position: fixed;
+      top: 74px;
+      left: 0;
+      width: 100%;
+      z-index: -10000;
+      opacity: 0;
+
+      transform: translateY(-100%);
+      transition: transform ease-in 0.26s, opacity ease-in 0.13s;
+    }
+  }
+
+  &__list--open {
+    @media (max-width: $screen-md-max) {
+      opacity: 1;
+      transform: translateY(0%);
+      transition: transform ease-out 0.26s, opacity ease-out 0.16s 0.10s;
     }
   }
 
@@ -37,7 +65,8 @@
     display: block;
     position: relative;
 
-    &:after, &:before {
+    &:after,
+    &:before {
       content: "";
       height: 10px;
       width: 100%;
@@ -57,10 +86,15 @@
       transform-origin: right;
     }
 
+    @media (max-width: $screen-xs-max) {
+      border-bottom: 1px solid $copper-gradient-light;
+    }
+
     &:hover {
       cursor: pointer;
 
-      &:after, &:before {
+      &:after,
+      &:before {
         transform: scaleX(1);
         transition: transform 0.25s ease-out;
       }

@@ -20,7 +20,7 @@ const ExperienceContainer = ({ experienceContent, navContent }) => {
       <div className="container">
       {experienceContent.map((user, i) => {
         return (
-          <Experience
+          <Experience key={`ExperienceContainer ${i}`}
             title={user.title}
             description={user.description}
             descriptionList={user.descriptionList}

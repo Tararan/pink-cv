@@ -1,14 +1,15 @@
-import React from "react";
-import scrollToComponent from "react-scroll-to-component";
+import React, { Component } from "react";
+import scrollToComponent from "react-scroll-to-component/index";
 
 const ScrollToElement = e => {
   console.log(e.target.id);
   const ScrollHere = document.getElementById("section-" + e.target.id);
+  console.log(ScrollHere);
   scrollToComponent(ScrollHere, {
-    offset: -55,
+    offset: 0,
     align: "top",
     // ease: "outExpo",
-    ease:'inOutCube',
+    ease: "inOutCube",
     duration: 1400
   });
 };
@@ -40,25 +41,30 @@ class Nav extends React.Component {
             <div className="hamburger-inner" />
           </div>
         </a>
-
-        <div
-          className={` ${this.state.isActive ? "" : "show"}`}
-          onClick={this.ToggleMenu}
-          id="nav__menu"
-        >
-          <div className="container">
-            <ul className="Nav__list">
-              {this.props.listItem.map(item => {
-                return (
-                  <li onClick={ScrollToElement} key={`Nav ${item}`} className="Nav__list-item " >
-                    <a onClick={ScrollToElement} id={`${item.replace(/\s/g, "")}`} className="Nav__list-item-link">
-                      {item}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+        <div className="container">
+          <ul
+            className={`Nav__list ${
+              this.state.isActive ? "" : "Nav__list--open"
+            }`}
+            onClick={this.ToggleMenu}
+          >
+            {this.props.listItem.map(item => {
+              return (
+                <li
+                  key={`Nav ${item}`}
+                  className="Nav__list-item "
+                >
+                  <a
+                    id={`${item.replace(/\s/g, "")}`}
+                    className="Nav__list-item-link"
+                    onClick={ScrollToElement}
+                  >
+                    {item}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
     );

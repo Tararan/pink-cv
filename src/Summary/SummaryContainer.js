@@ -20,7 +20,7 @@ const SummaryContainer = ({ summaryContent, navContent }) => {
       <div className="container">
       {summaryContent.map((user, i) => {
         return (
-          <Summary
+          <Summary key={`SummaryContainer ${i}`}
             title={user.title}
             description={user.description}
             descriptionList={user.descriptionList}

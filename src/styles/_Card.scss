@@ -21,15 +21,29 @@
 
   &__content {
     display: flex;
+
+    @media (max-width: $screen-xs-max) {
+      flex-flow: column-reverse;
+  
+    }
   }
 
   &__content-description {
     width: calc(100% - 400px);
     margin: 0 10px 0 0;
+
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+    }
   }
 
   &__content-image-container {
     position: relative;
+    
+    @media (max-width: $screen-xs-max) {
+      max-width: 300px;
+      margin: 0 auto;
+    }
   }
 
   &__content-image,
