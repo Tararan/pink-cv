@@ -1,7 +1,7 @@
 export const navContent = [
     {
         listItem: [
-            'Item  1',
+            'Work Experience',
             'Item 2',
             'Item 3'
         ]

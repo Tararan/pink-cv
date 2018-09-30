@@ -156,7 +156,7 @@ body, html {
   right: 0;
   margin: auto;
   width: auto;
-  height: 500vh; }
+  height: 100vh; }
   @media (max-width: 1199px) {
     .particles {
       height: 0; } }
@@ -281,12 +281,10 @@ body, html {
     max-width: 400px;
     margin: 0 10px 0 0; }
   .Card__content-image-blurred {
-    transform: scale(1.02);
     opacity: 0.75;
     position: absolute;
     z-index: -1;
-    top: 0;
-    filter: blur(14px) saturate(1.8); }
+    top: 0; }
 
 .Social {
   background-color: rgba(255, 255, 255, 0.75);

@@ -55,12 +55,12 @@
   }
 
   &__content-image-blurred {
-    transform: scale(1.02);
+    // transform: scale(1.02);
     opacity: 0.75;
 
     position: absolute;
     z-index: -1;
     top: 0;
-    filter: blur(14px) saturate(1.8);
+    // filter: blur(14px) saturate(1.8);
   }
 }
