@@ -51,6 +51,7 @@ Larger Devices (≥1200px): width: 1170px
   .title__background {
     font-family: "Playfair Display", serif;
     color: rgba(255, 255, 255, 0.4);
+    opacity: 0.5;
     font-size: 20em;
     letter-spacing: 1px;
     position: absolute;
@@ -59,8 +60,7 @@ Larger Devices (≥1200px): width: 1170px
     left: 0%;
     letter-spacing: -0.05em;
     text-transform: lowercase;
-    pointer-events: none;
-    filter: blur(6px); }
+    pointer-events: none; }
 
 /* STYLING FOR COLLAPSE BURGER */
 /* * Collapse */
@@ -288,11 +288,9 @@ body, html {
     max-width: 400px;
     margin: 0 10px 0 0; }
   .Card__content-image-blurred {
-    transform: scale(1.02);
     position: absolute;
     z-index: -1;
-    top: 0;
-    filter: blur(14px) saturate(1.8); }
+    top: 0; }
 
 .Social {
   background-color: rgba(255, 255, 255, 0.75);

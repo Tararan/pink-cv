@@ -1,11 +1,23 @@
-import React from "react";
+import React, { Component } from "react";
 import Summary from "./Summary.js";
+import { Element } from 'react-scroll';
+// import ScrollableAnchor, { configureAnchors } from "react-scrollable-anchor";
 
-const SummaryContainer = ({ summaryContent, navContent }) => {
-  return (
-    <section
+import { summaryContent } from "../Summary/summaryContent";
+import { navContent } from "../Nav/navContent";
+
+// var Scroll = require('react-scroll');
+// var Element = Scroll.Element;
+
+// const SummaryContainer = ({ summaryContent, navContent }) => {
+  export default class SummaryContainer extends Component {
+
+  render() {
+    return (
+    <Element
       className="section"
-      id={`section-${navContent[0].listItem[0].replace(/\s/g, "")}`}
+      name={`section-${navContent[0].listItem[0].replace(/\s/g, "")}`}
+      // id={`section-${navContent[0].listItem[0].replace(/\s/g, "")}`}
     >
       <h2 className="title">
       <div className="container">
@@ -29,8 +41,10 @@ const SummaryContainer = ({ summaryContent, navContent }) => {
         );
       })}
       </div>
-    </section>
+    </Element>
   );
 };
+}
+// };
 
-export default SummaryContainer;
+// export default SummaryContainer;

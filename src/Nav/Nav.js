@@ -1,5 +1,18 @@
 import React from "react";
-import ScrollIntoView from 'react-scroll-into-view';
+import { Link } from 'react-scroll';
+// import * as Scroll from 'react-scroll';
+// import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+ 
+// import ScrollableAnchor, {goToAnchor} from "react-scrollable-anchor";
+// import ScrollIntoView from 'react-scroll-into-view';
+
+// var Scroll = require('react-scroll');
+// var Link  = Scroll.Link;
+// var Element = Scroll.Element;
+// var scroller = Scroll.scroller;
+
+
+// scrollToBottom: function() {
 
 class Nav extends React.Component {
   constructor(props) {
@@ -38,15 +51,14 @@ class Nav extends React.Component {
             {this.props.listItem.map(item => {
               return (
                 <li key={`Nav ${item}`} className="Nav__list-item ">
-                <ScrollIntoView alignToTop="true" selector={`#section-${item.replace(/\s/g, "")}`}>
-                  <a
+                {/* <ScrollIntoView smooth="true" alignToTop="true" selector={`#section-${item.replace(/\s/g, "")}`}> */}
+                  <Link
+                  to={`section-${item.replace(/\s/g, "")}`} spy={true} smooth={true} duration={500}
                     id={`${item.replace(/\s/g, "")}`}
-                    className="Nav__list-item-link"
-                    // onClick={ScrollToElement}
-                  >
+                    className="Nav__list-item-link">
                     {item}
-                  </a>
-                </ScrollIntoView>
+                  </Link>
+                {/* </ScrollIntoView> */}
                 </li>
               );
             })}
