@@ -18,18 +18,17 @@ const Experience = ({ title, description, descriptionList, image }) => {
                 </ul>
               </div>
               <div className="Card__content-image-container">
-                {/* src={`${imgDomain}${image.replace(/\s/g, '')}`} */}
-                <img
-                  className="Card__content-image"
-                  src={`${image.replace(/\s/g, "")}w=400&q=50`}
-                  alt="logo"
-                />
-      {/*           <img
-                  className="Card__content-image-blurred"
-                  src={`${image.replace(/\s/g, "")}w=50&q=10`}
-                  alt="logo"
-                /> */}
-              </div>
+            <img
+              className="Card__content-image"
+              src={`${image.replace(/\s/g, "")}w=400&q=50`}
+              alt="logo"
+            />
+            <img
+              className="Card__content-image-blurred"
+              src={`${image.replace(/\s/g, "")}w=50&q=10`}
+              alt="logo"
+            />
+          </div>
             </div>
           </section>
         // </Fade>

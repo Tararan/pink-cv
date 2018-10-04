@@ -1,10 +1,10 @@
 export const params = {
   particles: {
     number: {
-      value: 40,
+      value: 300,
       density: {
         enable: false,
-        value_area: 1000
+        value_area: 800
       }
     },
     color: {
@@ -21,7 +21,7 @@ export const params = {
       }
     },
     opacity: {
-      value: 0.35,
+      value: 0.5,
       random: false,
       anim: {
         enable: false,
@@ -34,9 +34,9 @@ export const params = {
       value: 2,
       random: true,
       anim: {
-        enable: false,
-        speed: 40,
-        size_min: 0.1,
+        enable: true,
+        speed: 5,
+        size_min: 0.2,
         sync: false
       }
     },
@@ -49,14 +49,14 @@ export const params = {
     },
     move: {
       enable: true,
-      speed: 0.5,
+      speed: 4,
       direction: "none",
       random: true,
       straight: true,
       out_mode: "out",
       bounce: true,
       attract: {
-        enable: false,
+        enable: true,
         rotateX: 600,
         rotateY: 1200
       }
@@ -84,7 +84,7 @@ export const params = {
       },
       bubble: {
         distance: 350,
-        size: 2.5,
+        size: 3,
         duration: 10,
         opacity: 1,
         speed: 6

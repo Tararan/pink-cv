@@ -14,6 +14,7 @@
 .title {
   position: relative;
   white-space: nowrap;
+  margin-bottom: 80px;
 
   &__section {
     font-family: "Poiret One", cursive;
@@ -37,6 +38,7 @@
   &__background {
     // font-family: 'Abril Fatface', cursive;
     font-family: "Playfair Display", serif;
+    // font-family: "Poiret One", cursive;
     color: $white-40;
     font-size: 20em;
     letter-spacing: 1px;
@@ -45,7 +47,9 @@
     top: -330px;
     left: 0%;
     letter-spacing: -0.05em;
+    text-transform: lowercase;
+    pointer-events: none;
 
-    filter: blur(8px);
+    filter: blur(6px);
   }
 }

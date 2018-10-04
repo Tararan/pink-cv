@@ -1,13 +1,13 @@
 import React from 'react';
 import Nav from './Nav'; 
 
-const NavList = ({ navContent }) => {
+const NavContent = ({ navContent }) => {
     return (
         <nav className="Nav">
             {
                 navContent.map((user, i) => {
                     return (
-                        <Nav key={`NavList ${i}`}
+                        <Nav key={`NavContent ${i}`}
                             listItem={user.listItem}
                         />
                     );
@@ -17,4 +17,4 @@ const NavList = ({ navContent }) => {
     );
 }
 
-export default NavList;
+export default NavContent;

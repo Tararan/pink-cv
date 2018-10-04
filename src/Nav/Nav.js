@@ -1,18 +1,5 @@
-import React, { Component } from "react";
-import scrollToComponent from "react-scroll-to-component/index";
-
-const ScrollToElement = e => {
-  console.log(e.target.id);
-  const ScrollHere = document.getElementById("section-" + e.target.id);
-  console.log(ScrollHere);
-  scrollToComponent(ScrollHere, {
-    offset: 0,
-    align: "top",
-    // ease: "outExpo",
-    ease: "inOutCube",
-    duration: 1400
-  });
-};
+import React from "react";
+import ScrollIntoView from 'react-scroll-into-view';
 
 class Nav extends React.Component {
   constructor(props) {
@@ -50,17 +37,16 @@ class Nav extends React.Component {
           >
             {this.props.listItem.map(item => {
               return (
-                <li
-                  key={`Nav ${item}`}
-                  className="Nav__list-item "
-                >
+                <li key={`Nav ${item}`} className="Nav__list-item ">
+                <ScrollIntoView alignToTop="true" selector={`#section-${item.replace(/\s/g, "")}`}>
                   <a
                     id={`${item.replace(/\s/g, "")}`}
                     className="Nav__list-item-link"
-                    onClick={ScrollToElement}
+                    // onClick={ScrollToElement}
                   >
                     {item}
                   </a>
+                </ScrollIntoView>
                 </li>
               );
             })}

@@ -28,7 +28,7 @@ class App extends Component {
             <Education educationContent={educationContent} navContent={navContent} />
             <Social socialContent={socialContent} />
         </main>
-        <Particles className="particles" params={params} />
+        <Particles height="100%" className="particles" params={params} />
       </div>
     );
   }
