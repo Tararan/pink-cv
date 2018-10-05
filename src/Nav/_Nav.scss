@@ -1,7 +1,7 @@
 .Nav {
   box-shadow: $weak-shadow;
   position: fixed;
-  z-index: 6;
+  z-index: 2000;
   top: 0;
   left: 0;
   right: 0;
@@ -9,15 +9,19 @@
   color: $font-color;
   font-size: 1.2em;
   font-family: "Vidaloka", serif;
-  // height: 74px;
   background-color: $white-95;
+
+  @media (max-width: $screen-md-max) {
+  // height: 75px;
+  background-color: transparent;
+  }
 
   &:before {
     @media (max-width: $screen-md-max) {
       content: "";
       position: fixed;
       border-bottom: 1px solid $copper-gradient;
-      height: 74px;
+      height: 70px;
       background-color: $white-95;
       width: 100%;
     }
@@ -36,14 +40,15 @@
       flex-flow: column nowrap;
       align-self: center;
       position: fixed;
-      top: 74px;
+      top: 70px;
       left: 0;
       width: 100%;
       z-index: -10000;
       opacity: 0;
 
       transform: translateY(-100%);
-      transition: transform ease-in 0.26s, opacity ease-in 0.13s;
+      transition: transform ease-in 0.26s 0.3s, opacity ease-in 0.13s 0.3s;
+      // transition: transform ease-in 0.26s, opacity ease-in 0.13s;
     }
   }
 

@@ -1,18 +1,17 @@
 import React from "react";
 import Experience from "./Experience.js";
+import { Element } from 'react-scroll';
 
 const ExperienceContainer = ({ experienceContent, navContent }) => {
   return (
-    <section
+    <Element
       className="section"
-      id={`section-${navContent[0].listItem[1].replace(/\s/g, "")}`}
+      name={`section-${navContent[0].listItem[1].replace(/\s/g, "")}`}
     >
       <h2 className="title">
-      <div className="container">
         <span className="title__section">
           {navContent[0].listItem[1]}
         </span>
-        </div>
         <span className="title__background">
           {navContent[0].listItem[1]}
       </span>
@@ -29,7 +28,7 @@ const ExperienceContainer = ({ experienceContent, navContent }) => {
         );
       })}
       </div>
-    </section>
+    </Element>
   );
 };
 

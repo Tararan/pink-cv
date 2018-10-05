@@ -16,6 +16,11 @@
   white-space: nowrap;
   margin-bottom: 80px;
 
+  @media (max-width: $screen-xs-max) {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+  }
+
   &__section {
     font-family: "Poiret One", cursive;
     top: 0;
@@ -24,9 +29,17 @@
     display: block;
     letter-spacing: 0.25em;
     color: $font-color;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: $screen-sm-max) {
+      font-size: 3em;
+    }
 
     @media (max-width: $screen-xs-max) {
       font-size: 1.4em;
+      letter-spacing: 0.15em;
+      white-space: normal;
     }
 
     &:before,
@@ -51,6 +64,6 @@
     text-transform: lowercase;
     pointer-events: none;
 
-    // filter: blur(6px);
+    filter: blur(6px);
   }
 }

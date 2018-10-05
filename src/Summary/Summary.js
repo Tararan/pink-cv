@@ -1,9 +1,9 @@
 import React from "react";
-// import Fade from "react-reveal";
+import Fade from "react-reveal";
 
 const Summary = ({ title, description, descriptionList, image }) => {
   return (
-    // <Fade>
+    <Fade opposite>
       <section className="Card">
         <h3 className="Card__title">{title}</h3>
         <div className="Card__content">
@@ -31,7 +31,7 @@ const Summary = ({ title, description, descriptionList, image }) => {
           </div>
         </div>
       </section>
-    //  </Fade>
+     </Fade>
   );
 };
 

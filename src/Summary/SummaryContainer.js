@@ -1,50 +1,36 @@
 import React, { Component } from "react";
-import Summary from "./Summary.js";
-import { Element } from 'react-scroll';
-// import ScrollableAnchor, { configureAnchors } from "react-scrollable-anchor";
+import { Element } from "react-scroll";
 
 import { summaryContent } from "../Summary/summaryContent";
 import { navContent } from "../Nav/navContent";
 
-// var Scroll = require('react-scroll');
-// var Element = Scroll.Element;
+import Summary from "./Summary.js";
 
-// const SummaryContainer = ({ summaryContent, navContent }) => {
-  export default class SummaryContainer extends Component {
-
+export default class SummaryContainer extends Component {
   render() {
     return (
-    <Element
-      className="section"
-      name={`section-${navContent[0].listItem[0].replace(/\s/g, "")}`}
-      // id={`section-${navContent[0].listItem[0].replace(/\s/g, "")}`}
-    >
-      <h2 className="title">
-      <div className="container">
-        <span className="title__section">
-          {navContent[0].listItem[0]}
-        </span>
+      <Element
+        className="section"
+        name={`section-${navContent[0].listItem[0].replace(/\s/g, "")}`}
+      >
+        <h2 className="title">
+            <span className="title__section">{navContent[0].listItem[0]}</span>
+          <span className="title__background">{navContent[0].listItem[0]}</span>
+        </h2>
+        <div className="container">
+          {summaryContent.map((user, i) => {
+            return (
+              <Summary
+                key={`SummaryContainer ${i}`}
+                title={user.title}
+                description={user.description}
+                descriptionList={user.descriptionList}
+                image={user.image}
+              />
+            );
+          })}
         </div>
-        <span className="title__background">
-          {navContent[0].listItem[0]}
-      </span>
-      </h2>
-      <div className="container">
-      {summaryContent.map((user, i) => {
-        return (
-          <Summary key={`SummaryContainer ${i}`}
-            title={user.title}
-            description={user.description}
-            descriptionList={user.descriptionList}
-            image={user.image}
-          />
-        );
-      })}
-      </div>
-    </Element>
-  );
-};
+      </Element>
+    );
+  }
 }
-// };
-
-// export default SummaryContainer;

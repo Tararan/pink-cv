@@ -1,18 +1,17 @@
 import React from "react";
 import Education from "./Education.js";
+import { Element } from 'react-scroll';
 
 const EducationContainer = ({ educationContent, navContent }) => {
   return (
-    <section
+    <Element
       className="section"
-      id={`section-${navContent[0].listItem[2].replace(/\s/g, "")}`}
+      name={`section-${navContent[0].listItem[2].replace(/\s/g, "")}`}
     >
       <h2 className="title">
-      <div className="container">
         <span className="title__section">
           {navContent[0].listItem[2]}
         </span>
-        </div>
         <span className="title__background">
           {navContent[0].listItem[2]}
       </span>
@@ -29,7 +28,7 @@ const EducationContainer = ({ educationContent, navContent }) => {
         );
       })}
       </div>
-    </section>
+    </Element>
   );
 };
 

@@ -1,8 +1,8 @@
 export const experienceContent = [
     {
-        title: 'Lorem Ipsum',
-        description: [
-            `
+    title: 'Lorem Ipsum',
+    description: [
+    `
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et congue tortor. 
     Aenean sed pellentesque enim. In bibendum risus sed ante eleifend dictum. 
     Nunc finibus placerat neque, quis eleifend urna viverra porta. 
@@ -12,7 +12,7 @@ export const experienceContent = [
     Vestibulum ac augue tempus, finibus erat a, sagittis massa. Pellentesque elementum ut velit vel vulputate. 
     Nullam bibendum arcu a risus efficitur vestibulum.
     `,
-            `
+    `
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et congue tortor. 
     Aenean sed pellentesque enim. In bibendum risus sed ante eleifend dictum. 
     Nunc finibus placerat neque, quis eleifend urna viverra porta. 
@@ -22,25 +22,25 @@ export const experienceContent = [
     Vestibulum ac augue tempus, finibus erat a, sagittis massa. Pellentesque elementum ut velit vel vulputate. 
     Nullam bibendum arcu a risus efficitur vestibulum.
     `
-        ],
-        descriptionList: [
-            `
-        Lorem Ipsimitus
+    ],
+    descriptionList: [
+    `
+    Lorem Ipsimitus
     `, 
-            `
+    `
     accumsan
     `
-        ],
-        image: `
+    ],
+    image: `
     https://images.unsplash.com/photo-1519940640025-75fdf32010d7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=985117cd38a36d15bad22efdde61f5a8&auto=format&fit=crop&
     `
     },
     {
-        title: `
+    title: `
     Lorem Ipsum
     `,
-        description: [
-            `
+    description: [
+    `
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et congue tortor. 
     Aenean sed pellentesque enim. In bibendum risus sed ante eleifend dictum. 
     Nunc finibus placerat neque, quis eleifend urna viverra porta. 
@@ -50,7 +50,7 @@ export const experienceContent = [
     Vestibulum ac augue tempus, finibus erat a, sagittis massa. Pellentesque elementum ut velit vel vulputate. 
     Nullam bibendum arcu a risus efficitur vestibulum.
     `,
-            `
+    `
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et congue tortor. 
     Aenean sed pellentesque enim. In bibendum risus sed ante eleifend dictum. 
     Nunc finibus placerat neque, quis eleifend urna viverra porta. 
@@ -60,16 +60,17 @@ export const experienceContent = [
     Vestibulum ac augue tempus, finibus erat a, sagittis massa. Pellentesque elementum ut velit vel vulputate. 
     Nullam bibendum arcu a risus efficitur vestibulum.
     `
-        ],
-        descriptionList: [
-            `
+    ],
+    descriptionList: [
+    `
     Lorem Ipsum
-        `,
-            `
+    `,
+    `
     accumsan
     `
-        ],
-        image: `
+    ],
+
+    image: `
     https://images.unsplash.com/photo-1521133573892-e44906baee46?ixlib=rb-0.3.5&s=757213c7495187729447601a2ec9cdd9&auto=format&fit=crop&
     `
     },

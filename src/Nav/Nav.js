@@ -1,18 +1,5 @@
 import React from "react";
-import { Link } from 'react-scroll';
-// import * as Scroll from 'react-scroll';
-// import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
- 
-// import ScrollableAnchor, {goToAnchor} from "react-scrollable-anchor";
-// import ScrollIntoView from 'react-scroll-into-view';
-
-// var Scroll = require('react-scroll');
-// var Link  = Scroll.Link;
-// var Element = Scroll.Element;
-// var scroller = Scroll.scroller;
-
-
-// scrollToBottom: function() {
+import {Link} from 'react-scroll';
 
 class Nav extends React.Component {
   constructor(props) {
@@ -46,19 +33,18 @@ class Nav extends React.Component {
             className={`Nav__list ${
               this.state.isActive ? "" : "Nav__list--open"
             }`}
-            onClick={this.ToggleMenu}
           >
             {this.props.listItem.map(item => {
               return (
                 <li key={`Nav ${item}`} className="Nav__list-item ">
-                {/* <ScrollIntoView smooth="true" alignToTop="true" selector={`#section-${item.replace(/\s/g, "")}`}> */}
-                  <Link
-                  to={`section-${item.replace(/\s/g, "")}`} spy={true} smooth={true} duration={500}
+                  <Link  onClick={this.ToggleMenu}
+                  activeClass="active"
+                  to={`section-${item.replace(/\s/g, "")}`} 
+                  offset={-50}  isDynamic={true} spy={true} smooth={true} duration={300} ignoreCancelEvents={true}
                     id={`${item.replace(/\s/g, "")}`}
                     className="Nav__list-item-link">
                     {item}
                   </Link>
-                {/* </ScrollIntoView> */}
                 </li>
               );
             })}

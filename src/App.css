@@ -35,6 +35,10 @@ Larger Devices (≥1200px): width: 1170px
   position: relative;
   white-space: nowrap;
   margin-bottom: 80px; }
+  @media (max-width: 768px) {
+    .title {
+      font-size: 1.4em;
+      margin-bottom: 20px; } }
   .title__section {
     font-family: "Poiret One", cursive;
     top: 0;
@@ -42,10 +46,17 @@ Larger Devices (≥1200px): width: 1170px
     text-align: center;
     display: block;
     letter-spacing: 0.25em;
-    color: rgba(36, 36, 36, 0.63); }
+    color: rgba(36, 36, 36, 0.63);
+    display: flex;
+    justify-content: center; }
+    @media (max-width: 991px) {
+      .title__section {
+        font-size: 3em; } }
     @media (max-width: 768px) {
       .title__section {
-        font-size: 1.4em; } }
+        font-size: 1.4em;
+        letter-spacing: 0.15em;
+        white-space: normal; } }
     .title__section:before, .title__section:after {
       content: " ~ "; }
   .title__background {
@@ -60,7 +71,8 @@ Larger Devices (≥1200px): width: 1170px
     left: 0%;
     letter-spacing: -0.05em;
     text-transform: lowercase;
-    pointer-events: none; }
+    pointer-events: none;
+    filter: blur(6px); }
 
 /* STYLING FOR COLLAPSE BURGER */
 /* * Collapse */
@@ -139,13 +151,18 @@ Larger Devices (≥1200px): width: 1170px
   .hamburger-inner::after {
     bottom: -10px; }
 
+a {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none; }
+
 body {
   background-color: #FEC1D9;
   position: relative; }
-
-body, html {
-  overflow-x: hidden;
-  height: 100%; }
 
 .App {
   position: relative;
@@ -153,6 +170,7 @@ body, html {
 
 .particles {
   position: absolute;
+  display: block;
   z-index: 0;
   top: 0;
   left: 0;
@@ -165,16 +183,25 @@ body, html {
       height: 0;
       display: none; } }
 
+.particles--mobile {
+  display: none;
+  height: 0;
+  z-index: 20; }
+  @media (max-width: 1199px) {
+    .particles--mobile {
+      display: block;
+      height: 100%; } }
+
 .main {
   padding: 70px 0 35px; }
 
 .section {
-  padding-top: 40px; }
+  padding-top: 20px; }
 
 .Nav {
   box-shadow: 0px 10px 28px 1px rgba(0, 0, 0, 0.1);
   position: fixed;
-  z-index: 6;
+  z-index: 2000;
   top: 0;
   left: 0;
   right: 0;
@@ -184,11 +211,14 @@ body, html {
   font-family: "Vidaloka", serif;
   background-color: rgba(255, 255, 255, 0.95); }
   @media (max-width: 1199px) {
+    .Nav {
+      background-color: transparent; } }
+  @media (max-width: 1199px) {
     .Nav:before {
       content: "";
       position: fixed;
       border-bottom: 1px solid #d4beb1;
-      height: 74px;
+      height: 70px;
       background-color: rgba(255, 255, 255, 0.95);
       width: 100%; } }
   .Nav__list {
@@ -204,13 +234,13 @@ body, html {
         flex-flow: column nowrap;
         align-self: center;
         position: fixed;
-        top: 74px;
+        top: 70px;
         left: 0;
         width: 100%;
         z-index: -10000;
         opacity: 0;
         transform: translateY(-100%);
-        transition: transform ease-in 0.26s, opacity ease-in 0.13s; } }
+        transition: transform ease-in 0.26s 0.3s, opacity ease-in 0.13s 0.3s; } }
   @media (max-width: 1199px) {
     .Nav__list--open {
       opacity: 1;
@@ -260,11 +290,17 @@ body, html {
   color: rgba(36, 36, 36, 0.63);
   font-family: "Poiret One", cursive;
   font-size: 1.2em; }
+  @media (max-width: 768px) {
+    .Card {
+      padding: 10px 15px 40px; } }
   .Card__title {
     font-family: "Playfair Display", serif;
     text-align: left;
     font-size: 2em;
     margin: 10px 0 40px; }
+    @media (max-width: 768px) {
+      .Card__title {
+        text-align: center; } }
   .Card__content {
     display: flex; }
     @media (max-width: 768px) {
@@ -290,7 +326,8 @@ body, html {
   .Card__content-image-blurred {
     position: absolute;
     z-index: -1;
-    top: 0; }
+    top: 0;
+    filter: blur(14px) saturate(1.8); }
 
 .Social {
   background-color: rgba(255, 255, 255, 0.75);

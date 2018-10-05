@@ -9,6 +9,10 @@
   z-index: 3;
   color: $font-color;
 
+  @media (max-width: $screen-xs-max) {
+    padding: 10px 15px 40px;
+  }
+
   font-family: "Poiret One", cursive;
   font-size: 1.2em;
 
@@ -17,6 +21,10 @@
     text-align: left;
     font-size: 2em;
     margin: 10px 0 40px;
+
+    @media (max-width: $screen-xs-max) {
+      text-align: center;
+    }
   }
 
   &__content {
@@ -59,6 +67,6 @@
     position: absolute;
     z-index: -1;
     top: 0;
-    // filter: blur(14px) saturate(1.8);
+    filter: blur(14px) saturate(1.8);
   }
 }
