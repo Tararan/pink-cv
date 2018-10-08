@@ -1,16 +1,23 @@
 import React, { Component } from "react";
-import { Element } from "react-scroll";
-
-import { summaryContent } from "../Summary/summaryContent";
-import { navContent } from "../Nav/navContent";
-
 import Summary from "./Summary.js";
 
+import { summaryContent } from "./summaryContent";
+import { navContent } from "../Nav/navContent";
+
+import { Element } from 'react-scroll';
+
+/* Events.scrollEvent.register('end', function(to, element) {
+  const SummaryY = window.scrollY;
+  console.log(SummaryY);
+}); */
+
+ 
 export default class SummaryContainer extends Component {
+  
   render() {
     return (
       <Element
-        className="section"
+        className={`section section-${navContent[0].listItem[0].replace(/\s/g, "")}`}
         name={`section-${navContent[0].listItem[0].replace(/\s/g, "")}`}
       >
         <h2 className="title">

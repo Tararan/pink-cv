@@ -1,12 +1,34 @@
-import React from "react";
+import React, { Component } from "react";
 import Education from "./Education.js";
+
+import {educationContent} from "./educationContent";
+import {navContent} from "../Nav/navContent";
+
 import { Element } from 'react-scroll';
 
-const EducationContainer = ({ educationContent, navContent }) => {
-  return (
+export default class EducationContainer extends Component {
+/*   constructor(props) {
+    super(props);
+    this.state = { isActive: true };
+  } */
+  
+ /*  scrollDetect = e => {
+  window.addEventListener('scroll', (e) => {
+    console.log('is scrolled');
+    const windowScrollOffset = window.scrollY + 70;
+    const EducationY = e.target.name;
+    if(EducationY[0] === windowScrollOffset) {
+      console.log(EducationY + 'is scrolled');
+      this.setState({ isActive: !this.state.isActive });
+    }
+  })
+} */
+  render() {
+    return (
     <Element
-      className="section"
+    className={`section section-${navContent[0].listItem[2].replace(/\s/g, "")}`}
       name={`section-${navContent[0].listItem[2].replace(/\s/g, "")}`}
+      // onScroll={this.scrollDetect}
     >
       <h2 className="title">
         <span className="title__section">
@@ -28,8 +50,10 @@ const EducationContainer = ({ educationContent, navContent }) => {
         );
       })}
       </div>
+      <footer className="footer">
+        <span>Developed by </span><a className="link" href="https://ivojurisic.com">Ivo Jurišić</a>
+      </footer>
     </Element>
   );
 };
-
-export default EducationContainer;
+}

@@ -3,7 +3,7 @@ import Fade from "react-reveal";
 
 const Education = ({ title, description, descriptionList, image }) => {
   return (
-    <Fade unmountOnExit>
+    <Fade>
     <section className="Card">
       <h3 className="Card__title">{title}</h3>
       <div className="Card__content">

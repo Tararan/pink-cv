@@ -1,11 +1,21 @@
-import React from "react";
+import React, { Component } from "react";
 import Experience from "./Experience.js";
+
+import { experienceContent } from "./experienceContent";
+import { navContent } from "../Nav/navContent";
+
 import { Element } from 'react-scroll';
 
-const ExperienceContainer = ({ experienceContent, navContent }) => {
-  return (
+/* Events.scrollEvent.register('end', function(to, element) {
+  const ExperienceY = window.scrollY;
+  console.log(ExperienceY);
+}); */
+
+export default class ExperienceContainer extends Component {
+  render() {
+    return (
     <Element
-      className="section"
+    className={`section section-${navContent[0].listItem[1].replace(/\s/g, "")}`}
       name={`section-${navContent[0].listItem[1].replace(/\s/g, "")}`}
     >
       <h2 className="title">
@@ -31,5 +41,4 @@ const ExperienceContainer = ({ experienceContent, navContent }) => {
     </Element>
   );
 };
-
-export default ExperienceContainer;
+}

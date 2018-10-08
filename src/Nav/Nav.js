@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from 'react-scroll';
+import { Link } from 'react-scroll';
 
 class Nav extends React.Component {
   constructor(props) {
@@ -13,6 +13,7 @@ class Nav extends React.Component {
 
   ToggleMenu = e => {
     this.setState({ isActive: !this.state.isActive });
+    console.log(e.target.id);
   };
 
   render() {
@@ -40,7 +41,8 @@ class Nav extends React.Component {
                   <Link  onClick={this.ToggleMenu}
                   activeClass="active"
                   to={`section-${item.replace(/\s/g, "")}`} 
-                  offset={-50}  isDynamic={true} spy={true} smooth={true} duration={300} ignoreCancelEvents={true}
+                  offset={-70} smooth={'easeInOutQuint'} duration={600} ignoreCancelEvents={true}
+                  onSetActive={this.handleSetActive}
                     id={`${item.replace(/\s/g, "")}`}
                     className="Nav__list-item-link">
                     {item}
