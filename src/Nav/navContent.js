@@ -1,9 +1,9 @@
 export const navContent = [
     {
         listItem: [
-            'Work Experience',
-            'Education',
-            'Skills'
+            'Lorem Ipsum',
+            'Moderatum',
+            'Erat Verbum'
         ]
     }
 ]

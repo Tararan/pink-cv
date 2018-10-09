@@ -22,22 +22,36 @@ window.addEventListener('scroll', (e) => {
   const windowScroll = window.scrollY;
   const windowScrollOffset = window.scrollY + 70;
   console.log(windowScrollOffset);
-  const SummaryY = document.getElementsByName(`section-${navContent[0].listItem[0].replace(/\s/g, "")}`);
-  const ExperienceY = document.getElementsByName(`section-${navContent[0].listItem[1].replace(/\s/g, "")}`);
-  const EducationY = document.getElementsByName(`section-${navContent[0].listItem[2].replace(/\s/g, "")}`);
+  const SummaryY = document.getElementsByName(`section-${navContent[0].listItem[0].replace(/\s/g, "")}`)[0];
+  const ExperienceY = document.getElementsByName(`section-${navContent[0].listItem[1].replace(/\s/g, "")}`)[0];
+  const EducationY = document.getElementsByName(`section-${navContent[0].listItem[2].replace(/\s/g, "")}`)[0];
+ 
+  const SummaryYHeight = SummaryY.clientHeight;
+  const ExperienceYHeight = ExperienceY.clientHeight;
+  const EducationYHeight = EducationY.clientHeight;
+  
+  const SummaryYTop = Math.round(SummaryY.getBoundingClientRect().top + windowScroll);
+  const ExperienceYTop = Math.round(ExperienceY.getBoundingClientRect().top + windowScroll);
+  const EducationYTop = Math.round(EducationY.getBoundingClientRect().top + windowScroll);
 
-  const addClass = function (elementName, elementClass) {
-    if(elementName === windowScrollOffset) {
-      elementName.classList.add(elementClass);
-    }
+  const SummaryYBottom = SummaryYTop + SummaryYHeight;
+  const ExperienceYBottom = ExperienceYTop + ExperienceYHeight;
+  const EducationYBottom = EducationYTop + EducationYHeight;
+
+  const checkPos = function (elementPos, element) {
+    if(windowScrollOffset ===  elementPos) {
+      console.log('==> Scrolled to the top of ' + element);
+      // SummaryY.classList.add('test');
+    };
   };
-  addClass(SummaryY, 'test');
+
+   checkPos(SummaryYTop, SummaryY);
 
   // console.log(SummaryY);
   // console.log(SummaryY[0].getBoundingClientRect().top);
-   console.log(SummaryY[0].className + ' => ' + SummaryY[0].getBoundingClientRect().top + '=>' + Math.round(SummaryY[0].getBoundingClientRect().top + windowScroll));
-  console.log(ExperienceY[0].className + ' => ' + ExperienceY[0].getBoundingClientRect().top + '=>' + Math.round(ExperienceY[0].getBoundingClientRect().top + windowScroll));
-  console.log(EducationY[0].className + ' => ' + EducationY[0].getBoundingClientRect().top + '=>' + Math.round(EducationY[0].getBoundingClientRect().top + windowScroll));
+  console.log(SummaryY.className + ' ==> ' + SummaryYTop + ' Height: ' + SummaryYHeight + ' || Bottom point:' + SummaryYBottom);
+  console.log(ExperienceY.className + ' ==> ' + ExperienceYTop + ' Height: ' + ExperienceYHeight + ' || Bottom point:' + ExperienceYBottom);
+  console.log(EducationY.className + ' ==> ' + EducationYTop + ' Height: ' + EducationYHeight + ' || Bottom point:' + EducationYBottom);
 });
 
 class App extends Component {
