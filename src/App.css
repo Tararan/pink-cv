@@ -151,6 +151,18 @@ Larger Devices (≥1200px): width: 1170px
   .hamburger-inner::after {
     bottom: -10px; }
 
+.section {
+  opacity: 0;
+  transform: translateX(-25vw);
+  transition: opacity 0.24s ease-out, transform 0.25s ease-out 0.09s; }
+  @media (max-width: 768px) {
+    .section {
+      transform: translateX(-10vw); } }
+  .section--is-in-view {
+    opacity: 1;
+    transform: translateX(0vw);
+    transition: opacity 0.35s ease-out 0.12s, transform 0.3s ease-out; }
+
 a {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
