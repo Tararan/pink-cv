@@ -41,7 +41,7 @@ class Nav extends React.Component {
                   <Link  onClick={this.ToggleMenu}
                   activeClass="active"
                   to={`section-${item.replace(/\s/g, "")}`} 
-                  offset={-70} smooth={'easeInOutQuint'} duration={600} ignoreCancelEvents={true}
+                  offset={-70} smooth={'easeInOutQuint'} duration={950} ignoreCancelEvents={true}
                   onSetActive={this.handleSetActive}
                     id={`${item.replace(/\s/g, "")}`}
                     className="Nav__list-item-link">

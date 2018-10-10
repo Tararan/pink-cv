@@ -31,7 +31,7 @@ export const paramsMobile = {
       }
     },
     size: {
-      value: 10,
+      value: 6,
       random: true,
       anim: {
         enable: true,

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-// import Particles from "react-particles-js";
+import Particles from "react-particles-js";
 import scrollingFunction from "./scrollingFunction";
-// import { params } from "./particles/particlesParams";
-// import { paramsMobile } from "./particles/particlesParams-mobile";
+import { params } from "./particles/particlesParams";
+import { paramsMobile } from "./particles/particlesParams-mobile";
 
 import Nav from "./Nav/NavContainer";
 import { navContent } from "./Nav/navContent";
@@ -33,8 +33,8 @@ class App extends Component {
             <Education educationContent={educationContent} navContent={navContent} />
             <Social socialContent={socialContent} />
         </main>
-        {/* <Particles height="100vh" className="particles" params={params} /> */}
-        {/* <Particles height="100vh" className="particles particles--mobile" params={paramsMobile} /> */}
+        <Particles height="100vh" className="particles" params={params} />
+        <Particles height="100vh" className="particles particles--mobile" params={paramsMobile} />
       </div>
     );
   }

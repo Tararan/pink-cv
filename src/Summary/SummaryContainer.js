@@ -5,12 +5,6 @@ import { summaryContent } from "./summaryContent";
 import { navContent } from "../Nav/navContent";
 
 import { Element } from 'react-scroll';
-
-/* Events.scrollEvent.register('end', function(to, element) {
-  const SummaryY = window.scrollY;
-  console.log(SummaryY);
-}); */
-
  
 export default class SummaryContainer extends Component {
   

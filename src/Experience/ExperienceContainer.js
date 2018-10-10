@@ -6,11 +6,6 @@ import { navContent } from "../Nav/navContent";
 
 import { Element } from 'react-scroll';
 
-/* Events.scrollEvent.register('end', function(to, element) {
-  const ExperienceY = window.scrollY;
-  console.log(ExperienceY);
-}); */
-
 export default class ExperienceContainer extends Component {
   render() {
     return (

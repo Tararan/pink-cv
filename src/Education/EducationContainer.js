@@ -7,22 +7,7 @@ import {navContent} from "../Nav/navContent";
 import { Element } from 'react-scroll';
 
 export default class EducationContainer extends Component {
-/*   constructor(props) {
-    super(props);
-    this.state = { isActive: true };
-  } */
-  
- /*  scrollDetect = e => {
-  window.addEventListener('scroll', (e) => {
-    console.log('is scrolled');
-    const windowScrollOffset = window.scrollY + 70;
-    const EducationY = e.target.name;
-    if(EducationY[0] === windowScrollOffset) {
-      console.log(EducationY + 'is scrolled');
-      this.setState({ isActive: !this.state.isActive });
-    }
-  })
-} */
+
   render() {
     return (
     <Element
